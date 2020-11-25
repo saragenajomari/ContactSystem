@@ -1,5 +1,5 @@
 <div class="container">
-	<form action="<?php echo base_url(); ?>/Accounts/create" method="post">
+	<form action="<?php echo base_url(); ?>/Contact/create" method="post">
 		<div class="form-group">
    	 		<label for="name">Name:</label>
     		<input type="text" class="form-control" placeholder="Enter name" id="name" name="name">

@@ -11,10 +11,10 @@
     <ul class="navbar-nav ml-auto">
     	
     	<li class="nav-item">
-        <a class="nav-link" href="#">Contacts</a>
+        <a class="nav-link" href="index">Contacts</a>
       	</li>
       	<li class="nav-item">
-        <a class="nav-link" href="#">Add Contact</a>
+        <a class="nav-link" href="add">Add Contact</a>
       	</li>
       	<li class="nav-item">
         <a class="nav-link" href="logout">Logout</a>
