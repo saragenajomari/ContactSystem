@@ -33,6 +33,7 @@ $routes->setAutoRoute(true);
 //$routes->get('/', 'Pages::index');
 $routes->get('login', 'Pages::index');
 $routes->get('register', 'Pages::register');
+$routes->get('logout', 'Contact::logout');
 
 
 /**

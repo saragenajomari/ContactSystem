@@ -2,11 +2,16 @@
 use App\Models\ContactModel;
 class Contact extends BaseController
 {
-	
-	public function index(){
-		$session = \Config\Services::session();
-		if ($_SESSION['id']) {
 
+	function __construct(argument)
+	{
+		$session = \Config\Services::session();
+		if (!$_SESSION['id']) {
+			return redirect()->to('/ContactSystem/public');
+		}
+	}
+	public function index(){
+		
 		$id = 	$_SESSION['id'];
 		$model = new ContactModel();
 		$data['contacts'] = $model->getList($id);
@@ -15,12 +20,18 @@ class Contact extends BaseController
 		echo view('Includes/nav');
 		echo view('contact',$data);
 		echo view('Includes/footer');
-
-		}else{
-			return redirect()->to('/ContactSystem/public');
-		}
 	}
 
+	public function add(){
+  		echo view('Includes/header');
+		echo view('Includes/nav');
+		echo view('add_contact');
+		echo view('Includes/footer');
+	}
 
+	public function logout(){
+		session_destroy();
+	}
 
 }
+
