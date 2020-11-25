@@ -4,7 +4,7 @@ class Contact extends BaseController
 {
 	
 	public function index(){
-
+		$session = \Config\Services::session();
 		if ($_SESSION['id']) {
 
 		$id = 	$_SESSION['id'];
